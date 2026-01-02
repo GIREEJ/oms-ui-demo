@@ -8,12 +8,14 @@ import { OrdersDetails } from './features/orders/orders-details/orders-details';
 import { ReportsList } from './features/reports/reports-list/reports-list';
 import { Login } from './features/auth/login/login';
 import { Register } from './features/auth/register/register';
+import { authGuard } from './core/guards/auth-guard';
 
 
 export const routes: Routes = [
     {
         path:'',
         component:Layout,
+        canActivate:[authGuard],
         children:[
             { path:'', component:Home },
             { path:'products', component: ProductsList },
