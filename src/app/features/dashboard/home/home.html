@@ -1,1 +1,5 @@
-<p>home works!</p>
+<div class="cards">
+    <app-card title="Total Products" [value]="totalProducts()"></app-card>
+    <app-card title="Total Orders" [value]="totalOrders()"></app-card>
+    <app-card title="Revenue" [value]="revenue()" pipe="currency"></app-card>
+</div>

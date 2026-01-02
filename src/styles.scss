@@ -1,1 +1,32 @@
-/* You can add global styles to this file, and also import other style files */
+:root {
+  --content-max-width: 1200px;
+  --gap-lg: 24px;
+  --gap-md: 16px;
+  --gap-sm: 8px;
+}
+
+.page-container {
+  max-width: var(--content-max-width);
+  margin: 0 auto;
+  padding: var(--gap-lg);
+}
+
+.grid {
+  display: grid;
+  gap: var(--gap-lg);
+}
+
+.grid-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.grid-2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.card {
+  background: #ffffff;
+  border-radius: 8px;
+  padding: var(--gap-md);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}

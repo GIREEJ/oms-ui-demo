@@ -1,0 +1,18 @@
+<table>
+  <thead>
+    <tr>
+      <th *ngFor="let col of columns">{{ col.label }}</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let row of data">
+      <td *ngFor="let col of columns">
+        <ng-container [ngSwitch]="col.pipe">
+          <span *ngSwitchCase="'currency'">{{ row[col.key] | currency }}</span>
+          <span *ngSwitchCase="'date'">{{ row[col.key] | date }}</span>
+          <span *ngSwitchDefault>{{ row[col.key] }}</span>
+        </ng-container>
+      </td>
+    </tr>
+  </tbody>
+</table>

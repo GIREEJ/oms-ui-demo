@@ -1,0 +1,6 @@
+export const usersMock = [
+    {"id":1, "name":"Alice Johnson", "email":"alice@example.com"},
+    {"id":2, "name":"Bob Smith", "email":"bob@example.com"},
+    {"id":3, "name":"Charlie Lee", "email":"charlie@example.com"},
+    {"id":4, "name":"Diana Prince", "email":"diana@example.com"}
+];
